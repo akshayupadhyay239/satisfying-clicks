@@ -1,54 +1,42 @@
-# React + TypeScript + Vite
+# Satisfying Clicks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of endlessly satisfying fidget widgets for your browser. Built with a retro Windows 95 aesthetic.
 
-Currently, two official plugins are available:
+## Bubble Wrap Popper
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pop virtual bubble wrap with realistic sound effects and glossy bubble visuals. Click or drag to pop — just like the real thing.
 
-## Expanding the ESLint configuration
+- Glossy 3D bubbles with radial gradient shine
+- 5 randomized pop sound effects
+- Click-to-pop and drag-to-pop support (mouse + touch)
+- Real-time pop counter with progress bar
+- Responsive grid (10 columns on mobile, 15 on desktop)
+- Windows 95 UI chrome — title bar, menu bar, beveled borders, status bar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## More Widgets (Coming Soon)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Switches & Dials
+- Fidget Buttons
+
+## Tech Stack
+
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS v4
+- Howler.js (audio)
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open http://localhost:5173 in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run build
+npm run preview
 ```
